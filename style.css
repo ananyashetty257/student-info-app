@@ -63,6 +63,20 @@ h2::after {
     border-radius: 2px;
 }
 
+.contact-info {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
 .card p {
     font-size: 0.95rem;
     line-height: 1.6;
