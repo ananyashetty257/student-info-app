@@ -1,28 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Student Information System</title>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        .card {
+            max-width: 600px;
+            padding: 25px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px 5px 5px 0;
+            cursor: pointer;
+        }
+
+        #status-message {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
+
     <div class="card">
+
         <h1>Student Information System</h1>
+
         <h2>Team Members</h2>
+
         <p><strong>Name:</strong> Ananya S Shetty</p>
         <p><strong>Register Number:</strong> 2547161</p>
+
         <p><strong>Name:</strong> Renoreji Matthew</p>
         <p><strong>Register Number:</strong> 2547145</p>
+
         <p><strong>Name:</strong> Kripa Dhandhania</p>
         <p><strong>Register Number:</strong> 2547130</p>
+
         <p><strong>Programme:</strong> 5MCA A</p>
 
+        <!-- Show/Hide Details Button -->
         <button id="details-btn">Show Details</button>
 
+        <!-- Additional Student Details -->
         <div id="extra-details" class="hidden">
-            <p><strong>Department:</strong> Computer Applications</p>
-            <p><strong>Status:</strong> Active Student</p>
+
+            <h3>Additional Information</h3>
+
+            <p>
+                <strong>Department:</strong>
+                Computer Applications
+            </p>
+
+            <p>
+                <strong>Semester:</strong>
+                5
+            </p>
+
+            <p>
+                <strong>Academic Year:</strong>
+                2026
+            </p>
+
+            <p>
+                <strong>Specialization:</strong>
+                Computer Science
+            </p>
+
+            <p>
+                <strong>Status:</strong>
+                <span id="student-status">Active</span>
+            </p>
+
+            <!-- Status Button -->
+            <button id="status-btn">Change Status</button>
+
+            <p id="status-message"></p>
+
         </div>
+
     </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
 </body>
+
 </html>
