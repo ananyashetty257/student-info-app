@@ -6,23 +6,22 @@ const statusButton = document.getElementById("status-btn");
 const studentStatus = document.getElementById("student-status");
 const statusMessage = document.getElementById("status-message");
 
-
 // Show / Hide student details
 detailsButton.addEventListener("click", function () {
 
-    extraDetails.classList.toggle("hidden");
+    if (extraDetails.style.display === "none") {
 
-    if (extraDetails.classList.contains("hidden")) {
-
-        detailsButton.textContent = "Show Details";
+        extraDetails.style.display = "block";
+        detailsButton.textContent = "Hide Details";
 
     } else {
 
-        detailsButton.textContent = "Hide Details";
+        extraDetails.style.display = "none";
+        detailsButton.textContent = "Show Details";
 
     }
-});
 
+});
 
 // Change student status
 statusButton.addEventListener("click", function () {
@@ -30,12 +29,14 @@ statusButton.addEventListener("click", function () {
     if (studentStatus.textContent === "Active") {
 
         studentStatus.textContent = "Available";
-        statusMessage.textContent = "Student status changed to Available.";
+        statusMessage.textContent =
+            "Student status changed to Available.";
 
     } else {
 
         studentStatus.textContent = "Active";
-        statusMessage.textContent = "Student status changed to Active.";
+        statusMessage.textContent =
+            "Student status changed to Active.";
 
     }
 
